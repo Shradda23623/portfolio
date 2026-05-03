@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+html.light body {
+  background-color: #fafafa;
+  color: #0a0a0a;
+}
+
+html.light .bg-bg { background-color: #fafafa; }
+html.light .bg-bg-subtle { background-color: #f4f4f5; }
+html.light .bg-bg-elevated { background-color: #ffffff; }
+html.light .text-ink { color: #0a0a0a; }
+html.light .text-ink-muted { color: #52525b; }
+html.light .text-ink-dim { color: #71717a; }
+html.light .border-line { border-color: #e4e4e7; }
+html.light .bg-accent-subtle { background-color: #ecfccb; }
+
+::selection {
+  background: #a3e635;
+  color: #0a0a0a;
+}
+
+/* Subtle grid background for hero */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+html.light .grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+}
